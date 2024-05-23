@@ -107,7 +107,7 @@ cd PROJECT_ROOT
 python src/tasks/sam_auto_seg/par_run.py --purge 1 -b 256 -w 50 -m uncompressed_rle -c configs/VOC/sams/cfg.py
 
 # Train classification task.
-python src/tasks/train_coop/run.py -i 0 -e 0 -c configs/VOC/seg/cfg.py
+python src/tasks/train_coop/run.py -i 0 -e 0 -c configs/VOC/cls/cfg.py
 
 # Refine classification CAM with CAA.
 python src/tasks/aff_cam/run.py -P 0 -e 0 --cache_ori_cam 0 -c configs/VOC/cls/infer/final/affx2,at_score,att2affx1/cfg.py
